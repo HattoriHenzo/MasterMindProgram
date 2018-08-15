@@ -5,7 +5,7 @@
 	<artifactId>MasterMindProgram</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>MasterMind Program</name>
-	<description>Application d'implÃ©mentation du jeu MasterMind</description>
+	<description>Implémentation du jeu MasterMind</description>
 
 	<dependencies>		
 		<dependency>
