@@ -42,7 +42,7 @@ public class MasterMindUI extends JFrame {
 	
 	private Juge juge = new Juge();
 	private Choix[] choixOrdinateur = new Choix[Juge.NOMBRE_CHOIX];
-	private List<Resultat> resultats = new ArrayList<>();
+	private List<Resultat> resultats = new ArrayList<Resultat>();
 	private ResultatTableModel resultatTableModel = new ResultatTableModel(resultats);
 
 	/**
@@ -65,6 +65,7 @@ public class MasterMindUI extends JFrame {
 	 * Create the frame.
 	 */
 	public MasterMindUI() {
+        this.resultats = new ArrayList<Resultat>();
 		addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowOpened(WindowEvent e) {
@@ -86,9 +87,9 @@ public class MasterMindUI extends JFrame {
 		contentPane.setLayout(gbl_contentPane);
 		
 		JButton btnChoixOrdinateur = new JButton("Commencer...");
-		JButton btnChoixJoueur = new JButton("Valider");
+		final JButton btnChoixJoueur = new JButton("Valider");
 		
-		JLabel lblChoixOrdinateur = new JLabel("");
+		final JLabel lblChoixOrdinateur = new JLabel("");
 		GridBagConstraints gbc_lblChoixOrdinateur = new GridBagConstraints();
 		gbc_lblChoixOrdinateur.gridwidth = 5;
 		gbc_lblChoixOrdinateur.insets = new Insets(0, 0, 5, 0);
@@ -135,7 +136,7 @@ public class MasterMindUI extends JFrame {
 		ChoixComboBoxModel choix3ComboBoxModel = new ChoixComboBoxModel(choix);
 		ChoixComboBoxModel choix4ComboBoxModel = new ChoixComboBoxModel(choix);
 		
-		JComboBox cbxChoix1 = new JComboBox();
+		final JComboBox cbxChoix1 = new JComboBox();
 		cbxChoix1.setModel(choix1ComboBoxModel);
 		GridBagConstraints gbc_cbxChoix1 = new GridBagConstraints();
 		gbc_cbxChoix1.insets = new Insets(0, 0, 5, 5);
@@ -144,7 +145,7 @@ public class MasterMindUI extends JFrame {
 		gbc_cbxChoix1.gridy = 2;
 		contentPane.add(cbxChoix1, gbc_cbxChoix1);				
 		
-		JComboBox cbxChoix2 = new JComboBox();
+		final JComboBox cbxChoix2 = new JComboBox();
 		cbxChoix2.setModel(choix2ComboBoxModel);
 		GridBagConstraints gbc_cbxChoix2 = new GridBagConstraints();
 		gbc_cbxChoix2.insets = new Insets(0, 0, 5, 5);
@@ -153,7 +154,7 @@ public class MasterMindUI extends JFrame {
 		gbc_cbxChoix2.gridy = 2;
 		contentPane.add(cbxChoix2, gbc_cbxChoix2);
 		
-		JComboBox cbxChoix3 = new JComboBox();
+		final JComboBox cbxChoix3 = new JComboBox();
 		cbxChoix3.setModel(choix3ComboBoxModel);
 		GridBagConstraints gbc_cbxChoix3 = new GridBagConstraints();
 		gbc_cbxChoix3.insets = new Insets(0, 0, 5, 5);
@@ -162,7 +163,7 @@ public class MasterMindUI extends JFrame {
 		gbc_cbxChoix3.gridy = 2;
 		contentPane.add(cbxChoix3, gbc_cbxChoix3);
 		
-		JComboBox cbxChoix4 = new JComboBox();
+		final JComboBox cbxChoix4 = new JComboBox();
 		cbxChoix4.setModel(choix4ComboBoxModel);
 		GridBagConstraints gbc_cbxChoix4 = new GridBagConstraints();
 		gbc_cbxChoix4.insets = new Insets(0, 0, 5, 5);
