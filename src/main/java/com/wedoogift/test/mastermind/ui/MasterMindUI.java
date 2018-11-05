@@ -86,7 +86,7 @@ public class MasterMindUI extends JFrame {
 		gbl_contentPane.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 1.0, 0.0, Double.MIN_VALUE};
 		contentPane.setLayout(gbl_contentPane);
 		
-		JButton btnChoixOrdinateur = new JButton("Commencer...");
+		JButton btnChoixOrdinateur = new JButton("Commencer la partie...");
 		final JButton btnChoixJoueur = new JButton("Valider");
 		
 		final JLabel lblChoixOrdinateur = new JLabel("");

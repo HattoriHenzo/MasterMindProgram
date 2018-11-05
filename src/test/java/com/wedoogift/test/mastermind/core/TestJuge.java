@@ -85,6 +85,5 @@ public class TestJuge {
 		for(Choix c : ordinateur) {
 			message += c.toString() + "\n";
 		}
-		System.out.println(message);
 	}
 }
