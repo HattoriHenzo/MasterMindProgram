@@ -1,4 +1,4 @@
-package com.wedoogift.test.mastermind.ui;
+package com.practice.mastermind.ui;
 
 import java.awt.EventQueue;
 
@@ -6,10 +6,10 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import com.wedoogift.test.mastermind.core.Choix;
-import com.wedoogift.test.mastermind.core.Juge;
-import com.wedoogift.test.mastermind.core.MasterMindException;
-import com.wedoogift.test.mastermind.core.Resultat;
+import com.practice.mastermind.core.Choix;
+import com.practice.mastermind.core.Juge;
+import com.practice.mastermind.core.MasterMindException;
+import com.practice.mastermind.core.Resultat;
 
 import java.awt.GridBagLayout;
 import javax.swing.JButton;
@@ -65,7 +65,6 @@ public class MasterMindUI extends JFrame {
      * Create the frame.
      */
     public MasterMindUI() {
-        this.resultats = new ArrayList<Resultat>();
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowOpened(WindowEvent e) {
@@ -191,9 +190,9 @@ public class MasterMindUI extends JFrame {
 
                 try {
                     Resultat resultatJoueur = juge.evaluer(choixOrdinateur, choixJoueur);
-                    tableChoixJoueur.setModel(resultatTableModel);
                     resultatTableModel.ajouterResultat(resultatJoueur);
-
+                    tableChoixJoueur.setModel(resultatTableModel);
+                    
                     if (juge.victoire() == true) {
                         JOptionPane.showMessageDialog(getParent(), "Vous avez gagné en " + Juge.NOMBRE_TENTATIVE + " tentatives !");
                         Choix[] co = choixOrdinateur;
@@ -215,7 +214,7 @@ public class MasterMindUI extends JFrame {
         contentPane.add(btnChoixJoueur, gbc_btnChoixJoueur);
 
         tableChoixJoueur = new JTable();
-        tableChoixJoueur.setRowSelectionAllowed(false);
+        tableChoixJoueur.setRowSelectionAllowed(true);
         tableChoixJoueur.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         tableChoixJoueur.setModel(new DefaultTableModel(
                 new Object[][]{},

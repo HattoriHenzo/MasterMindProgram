@@ -1,10 +1,10 @@
-package com.wedoogift.test.mastermind.ui;
+package com.practice.mastermind.ui;
 
 import java.util.List;
 
 import javax.swing.table.AbstractTableModel;
 
-import com.wedoogift.test.mastermind.core.Resultat;
+import com.practice.mastermind.core.Resultat;
 
 public class ResultatTableModel extends AbstractTableModel {
 

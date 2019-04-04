@@ -1,4 +1,4 @@
-package com.wedoogift.test.mastermind.core;
+package com.practice.mastermind.core;
 
 /**
  * Classe représentant un choix effectué par l'ordinateur ou le joueur

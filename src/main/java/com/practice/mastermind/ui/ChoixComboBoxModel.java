@@ -1,8 +1,8 @@
-package com.wedoogift.test.mastermind.ui;
+package com.practice.mastermind.ui;
 
 import javax.swing.DefaultComboBoxModel;
 
-import com.wedoogift.test.mastermind.core.Choix;
+import com.practice.mastermind.core.Choix;
 
 public class ChoixComboBoxModel extends DefaultComboBoxModel<Choix> {
 

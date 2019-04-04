@@ -1,4 +1,4 @@
-package com.wedoogift.test.mastermind.core;
+package com.practice.mastermind.core;
 
 /**
  * Classe de gestion des exceptions du MasterMind

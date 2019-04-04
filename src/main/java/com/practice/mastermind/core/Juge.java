@@ -1,4 +1,4 @@
-package com.wedoogift.test.mastermind.core;
+package com.practice.mastermind.core;
 
 import java.util.ArrayList;
 import java.util.Arrays;

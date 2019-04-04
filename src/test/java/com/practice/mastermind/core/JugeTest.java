@@ -1,5 +1,10 @@
-package com.wedoogift.test.mastermind.core;
+package com.practice.mastermind.core;
 
+import com.practice.mastermind.core.Choix;
+import com.practice.mastermind.core.Juge;
+import com.practice.mastermind.core.Resultat;
+import com.practice.mastermind.core.Couleurs;
+import com.practice.mastermind.core.MasterMindException;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
